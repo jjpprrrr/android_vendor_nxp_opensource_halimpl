@@ -1,9 +1,9 @@
 # Enable build support for NFC open source vendor modules
-ifeq ($(call is-board-platform-in-list, sdm845 sdm710),true)
+ifeq ($(call is-board-platform-in-list, sdm845 sdm710 qcs605 sdm660),true)
 TARGET_USES_NQ_NFC := true
 endif
 
-NQ_VENDOR_NFC += vendor.nxp.hardware.nfc@1.2-service
+NQ_VENDOR_NFC += vendor.nxp.hardware.nfc@2.0-service
 NQ_VENDOR_NFC += nfc_nci.nqx.default.hw
 
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
